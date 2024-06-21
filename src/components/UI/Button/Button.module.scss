@@ -1,0 +1,43 @@
+@import '../../../global_styles/mixins.scss';
+@import '../../../global_styles/variables.scss';
+
+.custom__button {
+    position: relative;
+    color: $white;
+    background-color: $header-footer-bg;
+    padding: 10px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid $white;
+    border-radius: 15px;
+
+    transition: all $hover-time ease;
+
+    &:hover {
+        color: $header-footer-bg;
+        border-color: $header-footer-bg;
+        background-color: $white;
+
+        .custom__button_counter {
+            color: $hover-links;
+            border-color: $white;
+            background-color: $header-footer-bg;
+        }
+    }
+
+    .custom__button_counter {
+        position: absolute;
+        right: -10%;
+        top: -25%;
+
+        background-color: $white;
+        color: $header-footer-bg;
+        padding: 5px 10px;
+        text-align: center;
+        border: 2px solid $white;
+        border-radius: 50%;
+
+        transition: all $hover-time ease;
+
+    }
+}

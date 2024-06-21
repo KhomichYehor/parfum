@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == 'mobile-xs' {
+      @media (max-width: #{$mobile-xs}) {
+        @content;
+      }
+    } @else if $breakpoint == 'mobile-m' {
+      @media (max-width: #{$mobile-m}) {
+        @content;
+      }
+    } @else if $breakpoint == 'tablet' {
+      @media (max-width: #{$tablet}) {
+        @content;
+      }
+    } @else if $breakpoint == 'laptop' {
+      @media (max-width: #{$laptop}) {
+        @content;
+      }
+    } @else if $breakpoint == 'desktop' {
+      @media (max-width: #{$desktop}) {
+        @content;
+      }
+    }
+  }
